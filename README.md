@@ -23,6 +23,11 @@ A red halo text tells you when a double-click was blocked.
 Wraps `ISInventoryPane:doContextualDblClick` (client only, no vanilla files
 replaced). Safe to add to or remove from existing saves.
 
+## Install
+
+- Subscribe on the [Steam Workshop](https://steamcommunity.com/sharedfiles/filedetails/?id=3821551691) (ID `3821551691`) and enable it in the mod list.
+- Manual: copy `Contents/mods/DoubleClickPoisonGuard` into `%USERPROFILE%\Zomboid\mods\`.
+
 ## 한국어
 
 인벤토리에서 더블클릭할 때 플레이어가 알 수 있는 위험한 것만 먹거나 마시지 않습니다:

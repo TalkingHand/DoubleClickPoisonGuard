@@ -1,4 +1,5 @@
 version=1
+id=3821551691
 title=Double-Click Poison Guard
 description=[h1]Double-Click Poison Guard[/h1]
 description=In vanilla Build 42, double-clicking an item in your inventory eats or drinks it. The game only checks the [b]main[/b] fluid of a bottle, so a water bottle with some bleach mixed in still gets drunk, even with the poison icon showing. This mod blocks the double-click when the item is harmful [b]and you can tell it is harmful[/b].
@@ -24,6 +25,7 @@ description=인벤토리에서 더블클릭할 때 플레이어가 알 수 있�
 description=
 description=Source: https://github.com/TalkingHand/DoubleClickPoisonGuard
 description=
+description=Workshop ID: 3821551691
 description=Mod ID: DoubleClickPoisonGuard
 tags=Build 42;Interface
 visibility=public
