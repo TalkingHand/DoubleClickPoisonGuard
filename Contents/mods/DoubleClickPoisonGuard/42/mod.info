@@ -1,0 +1,8 @@
+name=Double-Click Poison Guard
+id=DoubleClickPoisonGuard
+description=Double-clicking an item in your inventory no longer eats or drinks things you can tell are harmful: known poison, rotten or dangerous raw food, bleach or other poison mixed into a bottle. Hidden poison is not revealed. The right-click menu still works.
+poster=poster.png
+author=TalkingHand
+url=https://github.com/TalkingHand/DoubleClickPoisonGuard
+modversion=1.0.0
+versionMin=42.0
