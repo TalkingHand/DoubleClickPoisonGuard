@@ -38,3 +38,7 @@ replaced). Safe to add to or remove from existing saves.
 ## License
 
 All rights reserved. No license is granted for redistribution or modified versions.
+
+## Support
+
+If this mod helps you, you can support it via [PayPal](https://www.paypal.com/paypalme/TalkingHands619/3). It's optional; every feature stays free.
