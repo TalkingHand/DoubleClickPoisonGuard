@@ -1,0 +1,26 @@
+# DoubleClickPoisonGuard: vanilla dependencies (format: _guide/README.md "바닐라 의존 목록")
+# checked: 42.21.0
+#
+# kind	target	note
+
+lua-wrap	ISInventoryPane:doContextualDblClick	client/ISUI/ISInventoryPane.lua:957. Wrapped at file load; original called unless the item is blocked
+lua-file	client/ISUI/ISInventoryPane.lua	required by DoubleClickPoisonGuard.lua:25
+lua-field	ISInventoryPane.player	player index (DoubleClickPoisonGuard.lua:79)
+
+java-call	getSpecificPlayer(index)
+java-call	instanceof(item, "Food")
+java-call	IsoPlayer:isKnownPoison(item)
+java-call	Food:isTainted() / isRotten() / isbDangerousUncooked() / isCooked()
+java-call	InventoryItem:getFluidContainer() / getDisplayName()
+java-call	FluidContainer:isEmpty() / isTaintedStatusKnown() / contains(fluid)
+java-call	Fluid.getAllFluids() / Fluid:isPoisonous()	list of poisonous fluids built once, cached
+java-call	getSandboxOptions():getOptionByName("EnableTaintedWaterText"):getValue()
+java-call	HaloTextHelper.addBadText(player, text)	Java-exposed
+data	Fluid.TaintedWater	excluded from the visible-poison list (handled by the sandbox option)
+sandbox	EnableTaintedWaterText	vanilla option
+
+assume	vanilla double-click drinks a container judged by its primary fluid only	ISInventoryPane.lua:1036 (Beverage), :1060 (Water/CarbonatedWater), both skip only when isTaintedStatusKnown(). If vanilla starts checking the whole mix, the mod is redundant (still harmless)
+assume	vanilla poison icon rule	ISInventoryPane.lua:2324/2331: Food tainted + EnableTaintedWaterText or isKnownPoison; fluid contains Bleach, or TaintedWater with getPoisonRatio() > 0.1 + option. The mod blocks a superset of what the icon shows; must never block on info the player can't see
+assume	poisonous fluids are named in the fluid tooltip	so blocking on any isPoisonous() fluid except TaintedWater reveals nothing new
+assume	bleach blends into Beverage fluids	scripts/generated/fluids.txt. This is the bug the mod exists for
+assume	right-click menu is a separate path	the mod only wraps the double-click; consuming on purpose via the context menu must still work
