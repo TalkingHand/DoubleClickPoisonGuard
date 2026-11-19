@@ -1,0 +1,24 @@
+在原版 Build 42 中,双击物品栏里的物品会直接吃掉或喝掉它。对于瓶子,游戏只检查其中占比最大的液体,所以混入了少量漂白剂的水瓶即使显示着毒药图标,双击后也照样会被喝下去。本模组会在物品有害、并且你能看出它有害时阻止双击。
+
+[b]右键菜单保持不变,想故意吃下或喝下时仍然可以使用。[/b]
+
+[h2]会阻止双击的情况[/h2]
+[list]
+[*][b]食物:[/b]已知有毒的食物、变质的食物,以及未烹饪的危险生食(肉、鱼、蛋等)
+[*][b]瓶子等液体容器:[/b]混入了任何有毒液体,例如漂白剂、汽油、清洁剂、香水、古龙香水、染料、染发剂或酸
+[*][b]污染的水和食物:[/b]仅在沙盒选项 [b]启用 污染的水 提示[/b] 开启时
+[/list]
+双击被阻止时,角色头顶会显示一行红色提示。该提示在游戏中以英文显示。
+
+[h2]不泄露隐藏信息[/h2]
+尚未辨认的毒浆果和毒蘑菇,以及上述沙盒选项关闭时的污染的水,行为与原版完全相同。被阻止的双击不会告诉你角色本不知道的事情。
+
+[h2]兼容性[/h2]
+[list]
+[*]仅客户端。模组包装了原版的双击处理函数 [i]ISInventoryPane:doContextualDblClick[/i],不替换任何原版文件。
+[*]可以随时添加到现有存档或从中移除。
+[/list]
+
+Source: https://github.com/TalkingHand/DoubleClickPoisonGuard
+
+[url=https://ko-fi.com/talkinghands2285][img]https://raw.githubusercontent.com/TalkingHand/DoubleClickPoisonGuard/main/art/kofi_button.png[/img][/url]

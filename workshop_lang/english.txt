@@ -1,0 +1,24 @@
+In vanilla Build 42, double-clicking an item in your inventory eats or drinks it. For a bottle the game only checks the main fluid, so a water bottle with some bleach mixed in still gets drunk, even while the poison icon is showing. This mod stops the double-click when the item is harmful and you can tell that it is.
+
+[b]The right-click menu is unchanged, so you can still eat or drink anything on purpose.[/b]
+
+[h2]Blocked on double-click[/h2]
+[list]
+[*][b]Food:[/b] food you know is poisonous, rotten food, and dangerous raw food (meat, fish, eggs and the like) that has not been cooked
+[*][b]Bottles and other fluid containers:[/b] any poisonous fluid in the mix, such as bleach, petrol, cleaning liquid, perfume, cologne, dye, hair dye or acid
+[*][b]Tainted water and food:[/b] only when the sandbox option [b]Enable 'Tainted Water' tooltip[/b] is on
+[/list]
+When a double-click is blocked, a red message above your character tells you so.
+
+[h2]No hidden info[/h2]
+Poisonous berries and mushrooms you have not identified, and tainted water while that sandbox option is off, behave exactly as in vanilla. A blocked double-click never tells you something your character does not know.
+
+[h2]Compatibility[/h2]
+[list]
+[*]Client-side only. It wraps the vanilla double-click handler [i]ISInventoryPane:doContextualDblClick[/i] and replaces no vanilla files.
+[*]Safe to add to or remove from an existing save.
+[/list]
+
+Source: https://github.com/TalkingHand/DoubleClickPoisonGuard
+
+[url=https://ko-fi.com/talkinghands2285][img]https://raw.githubusercontent.com/TalkingHand/DoubleClickPoisonGuard/main/art/kofi_button.png[/img][/url]
