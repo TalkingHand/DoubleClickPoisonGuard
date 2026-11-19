@@ -1,5 +1,5 @@
 # DoubleClickPoisonGuard: vanilla dependencies (format: _guide/README.md "바닐라 의존 목록")
-# checked: 42.21.0
+# checked: 42.22.2 (static diff only (wrapped function unchanged))
 #
 # kind	target	note
 
